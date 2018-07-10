@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.16.3",
+    "hogan-express-strict": "^0.5.4",
+    "mustache": "^2.3.0"
+  }
+}
