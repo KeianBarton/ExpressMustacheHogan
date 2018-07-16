@@ -1,0 +1,29 @@
+// will compile into .content { ... }, .content h2 { ... }
+.content {
+    border: 1px solid #ccc;
+    h2 {
+        font-size: 3em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}
+
+// nesting matching namespaces
+.btn {
+    text: {
+        decoration: underline;  // compiles to text-decoration
+    }
+}
+
+// parent selector
+.parent {
+    &.child {   // parent.child { ... }
+    }
+}
+.sidebar {
+    h2 {
+        .users & {  // compiles to .users .sidebar h2
+        }
+    }
+}
