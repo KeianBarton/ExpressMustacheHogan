@@ -1,0 +1,8 @@
+{
+    "partials" : { "partial2": "partials/partial2" },
+    "boolExample" : "true",
+    "myList" : [
+        { "item": "Foo" },
+        { "item": "Bar" }
+    ]
+}

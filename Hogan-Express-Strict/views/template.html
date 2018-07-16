@@ -1,3 +1,28 @@
-<title>{{title}}</title>
-<p>{{name}} says {{> partial1 }}</p>
+<title>{{ title }}</title>
+
+<h3>Partials examples</h3>
+
+<p>{{ name }} says {{> partial1 }}</p>
 <p>{{> partial2 }}</p>
+
+<h3>Boolean example</h3>
+
+{{ #boolExample }}
+<p>Will be shown if a boolean is recognised</p>
+{{ /boolExample }}
+
+<h3>List example</h3>
+
+<ul>
+    {{#myList}}           <!-- lists do not like spaces e.g. {{ #myList }} -->
+    <li>{{item}}</li>
+    {{/myList}}
+</ul>
+
+<h3>Lambdas example</h3>
+
+<p>
+    {{#lambdas.boldAndUpper}}
+    {{name}} says this text should be in bold uppercase
+    {{/lambdas.boldAndUpper}}
+</p>
