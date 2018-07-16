@@ -1,5 +1,11 @@
 <title>{{ title }}</title>
 
+<h3>Basic variables</h3>
+
+<p>Name: {{name}}</p>
+<p>Curly braces escaped using set delimiters:</p>
+<p>{{=<% %>=}} {{name}} - can still reference variables e.g. <% name %> <%={{ }}=%></p>
+
 <h3>Partials examples</h3>
 
 <p>{{ name }} says {{> partial1 }}</p>
@@ -8,7 +14,7 @@
 <h3>Boolean example</h3>
 
 {{ #boolExample }}
-<p>Will be shown if a boolean is recognised</p>
+    <p>Will be shown if a boolean is recognised</p>
 {{ /boolExample }}
 
 <h3>List example</h3>
@@ -26,3 +32,31 @@
     {{name}} says this text should be in bold uppercase
     {{/lambdas.boldAndUpper}}
 </p>
+
+<h3>Non-false value example</h3>
+
+<p>When a value is not a list and non-false, it will be used as context for any further nested values</p>
+<p>
+    {{#nonFalse}}
+    Nested value is: {{nestedVal}}
+    {{/nonFalse}}
+</p>
+
+<h3>Inverted sections</h3>
+
+{{#invertedSection}}
+    <p>This will be rendered if the key exists, is true, or is a non-empty list</p>
+{{/invertedSection}}
+{{^invertedSection}}
+    <p>This will be rendered if the key doesn't exist, is false, or is an empty list</p>
+{{/invertedSection}}
+
+<h3>Commenting in Mustache</h3>
+
+<p>
+    A secret comment can be found here: {{!
+        this is a secret comment
+    }}
+</p>
+
+<a href="https://mustache.github.io/mustache.5.html">Mustache docs</a>

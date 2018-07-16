@@ -4,5 +4,7 @@
     "myList" : [
         { "item": "Foo" },
         { "item": "Bar" }
-    ]
+    ],
+    "nonFalse" : { "nestedVal" : "hi" },
+    "invertedSection" : []
 }
