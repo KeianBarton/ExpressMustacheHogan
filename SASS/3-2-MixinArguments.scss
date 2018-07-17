@@ -1,0 +1,15 @@
+@mixin box-sizing($x : border-box) { // can optionally define default value border-box
+    -webkit-box-sizing: $x;
+    -moz-box-sizing: $x;
+    box-sizing: $x;
+}
+
+.content {
+    @include box-sizing;  // default value used
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.callout {
+    @include box-sizing(content-box);
+}

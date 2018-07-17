@@ -1,0 +1,12 @@
+.content {
+    h2 {}
+}
+
+.callout {
+    @extend .content;
+}
+
+// compiles to
+// .content, .callout { ... }
+// .content h2, .callout h2 { ... }
+// .callout { ... }

@@ -1,0 +1,19 @@
+@mixin transition($val...) {
+    -webkit-transition: $val;
+    -moz-transition: $val;
+    transition: $val;
+}
+.btn-a {
+    @include transition(color 0.3s ease-in, background 0.5s ease-out);
+}
+
+// splitting arguments
+@mixin button($radius, $color) {
+    border-radius: $radius;
+    color: $color;
+}
+
+.btn-a{
+    $properties: 4px, #000;
+    @include button($properties...); // will be split into radius, color
+}

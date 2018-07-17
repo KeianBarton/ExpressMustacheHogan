@@ -1,0 +1,15 @@
+.bta-a {
+    background: #777;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-b {
+    @extend .btn-a;
+    background: #ff0;
+}
+
+// compiles to
+// .btn-a, .btn-b { ... }
+// .btn-b { ... }

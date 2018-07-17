@@ -1,0 +1,6 @@
+$side: top;
+sup {
+    #{$side}: -0.5em;
+}
+.callout-#{$side} {     // compiles to .callout-top { ... }
+}

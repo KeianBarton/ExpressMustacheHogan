@@ -1,0 +1,14 @@
+$theme: dark;
+
+header {
+    @if $theme == dark {
+        background: #000;
+    } @else if $theme == pink {
+        background: pink;
+    } @else {   // if false or null
+        background: #fff;
+    }
+}
+
+// can use ==, !=
+// for numbers, >, >=, <, <=

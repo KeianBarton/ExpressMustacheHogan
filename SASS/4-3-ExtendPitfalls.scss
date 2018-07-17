@@ -1,0 +1,13 @@
+.btn-a {
+    // ...
+}
+.btn-b {
+    @extend .btn-a;
+    // ...
+}
+.sidebar .btn-a {
+    // ...
+}
+
+// will compile giving
+// .sidebar .btn-a, .sidebar .btn-b { ... }

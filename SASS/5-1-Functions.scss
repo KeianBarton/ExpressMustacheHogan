@@ -1,0 +1,6 @@
+@function fluidize($target, $context) {
+    @return ($target / $context) * 100%;
+}
+.sidebar {
+    width: fluidize(350px, 1000px);
+}

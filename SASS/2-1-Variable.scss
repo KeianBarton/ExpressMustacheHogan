@@ -1,0 +1,12 @@
+$base: #777777;
+
+.sidebar {
+    p {
+        color: $base;
+    }
+}
+
+// overriding variables
+$title: 'Foo';
+$title: 'Bar';  // overrides first value
+$title: 'Bla' !default; // checks if value exists, so does not override

@@ -1,0 +1,6 @@
+@mixin button($color, $rounded: false) {
+    color: $color;
+    @if $rounded {
+        border-radius: $rounded;
+    }
+}

@@ -1,0 +1,3 @@
+@mixin highlight($color, $side) {
+    border-#{$side}-color: $color;
+}

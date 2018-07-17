@@ -1,0 +1,14 @@
+%btn {
+    background: #777;
+}
+.btn-a {
+    @extend %btn;
+}
+.btn-b {
+    @extend %btn;
+}
+.sidebar .btn-a {
+    text-transform: lowercase;
+}
+
+// changes to btn-a, no longer affect btn-b

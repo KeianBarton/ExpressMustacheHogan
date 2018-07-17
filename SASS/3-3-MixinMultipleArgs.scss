@@ -1,0 +1,16 @@
+@mixin button($radius, $color) {
+    border-radius: $radius;
+    color: $color;
+}
+.btn-a {
+    @include button(4px, #000);
+    // throws compile error as too few args
+    // @include button(4px);
+}
+
+@mixin bla($foo, $optional : #000) {} // optional args must come last
+
+// keyword arguments allow any order
+.btn-b {
+    @include button($color: #777777, $radius: 5px);
+}

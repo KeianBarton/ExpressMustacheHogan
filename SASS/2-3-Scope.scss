@@ -1,0 +1,15 @@
+p {
+    $border: #ccc;
+    border-top: 1px solid $border;
+}
+h1 {
+    border-top: 1px solid $border;   // compile error - cannot access color
+}
+
+
+// change variable globally
+$base: #ccc;
+
+h1 {
+    $base: #fff;   // $base #fff from now on
+}
