@@ -1,0 +1,31 @@
+$color-base: #333333;
+
+.addition {
+    background: $color-base + #112233;   // combines to #445566
+}
+
+.multiplication {
+    background: $color-base * 2;
+}
+
+// Can convert to rgba (instead of having to manually lookup RGB values) in CSS:
+$color: #333333;
+
+.alpha {
+    background: rgba($color, 0.8);
+}
+
+// Colour functions
+$color: #333;
+
+.bla {
+    color: lighten($color, 20%);
+    color: darken($color, 20%);
+    color: saturate($color, 20%);
+    color: desaturate($color, 20%);
+    color: mix(#ffff00, #107fc9); // half mix between the two
+    color: mix(#ffff00, #107fc9, 30%); // 30% of 1st color
+    color: grayscale($color);
+    color: invert($color);
+    color: complement($color);
+}

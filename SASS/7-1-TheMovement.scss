@@ -1,0 +1,10 @@
+.sidebar {
+    border: 1px solid #ccc;
+    @media (min-width: 700px) {
+        float: right;
+        width: 30%;
+    }
+}
+
+// compiles to @media(..) {
+//    .sidebar { ... }

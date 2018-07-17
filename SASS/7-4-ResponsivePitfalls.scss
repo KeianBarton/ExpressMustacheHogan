@@ -1,0 +1,13 @@
+.sidebar {
+    border: 1px solid #ccc;
+}
+.callout {
+    @media (min-width: 700px) {
+        @extend .sidebar;   // compilation error
+        width: 35%;
+        .aside { /* ... */ }
+        .content {
+            @extend .aside;  // okay
+        }
+    }
+}

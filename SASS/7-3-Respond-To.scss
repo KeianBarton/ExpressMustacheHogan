@@ -1,0 +1,13 @@
+@mixin respond-to($val, $query) {
+    @media ($val: $query) {
+        // makes use of whatever properties are passed from the include
+        @content
+    }
+}
+.sidebar {
+    border: 1px solid #ccc;
+    @include respond-to(max-width, 600px) {
+        float: right;
+        width: 30%;
+    }
+}

@@ -1,0 +1,5 @@
+// Initial left-side string determines post-concatenation quotes:
+$family: "Helvetica " + "Neue";   // "Helvetica Neue"
+$family: 'sans-' + serif;   // 'sans-serif'
+$family: sans- + serif;   // sans-serif
+
